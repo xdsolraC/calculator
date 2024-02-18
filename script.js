@@ -15,6 +15,13 @@ function refreshDisplay(val) {
 // Default display value
 refreshDisplay("0");
 
+// Handle clicks
+function handleClearBtn() {
+    currentValue = "";
+    operator = "";
+    previousValue = "";
+}
+
 function operate(operator, a, b) {
     switch (operator) {
         case "+":
