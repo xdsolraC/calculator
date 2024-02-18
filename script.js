@@ -26,6 +26,15 @@ function handleNumberBtn(num) {
     currentValue += num;
 }
 
+function handleEqualsBtn() {
+    const prev = parseFloat(previousValue);
+    const current = currentValue === "" ? prev : parseFloat(currentValue);
+    if (isNaN(prev) || isNaN(current)) return;
+    currentValue = operate(operator, prev, current).toString();
+    operator = "";
+    previousValue = "";
+}
+
 function operate(operator, a, b) {
     switch (operator) {
         case "+":
