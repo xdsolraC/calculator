@@ -22,6 +22,10 @@ function handleClearBtn() {
     previousValue = "";
 }
 
+function handleNumberBtn(num) {
+    currentValue += num;
+}
+
 function operate(operator, a, b) {
     switch (operator) {
         case "+":
