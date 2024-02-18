@@ -22,6 +22,16 @@ function handleClearBtn() {
     previousValue = "";
 }
 
+function handleOperatorBtn(passedOperator) {
+    if (currentValue === "") return;
+    else if (previousValue !== "") {
+        handleEqualsBtn();
+    }
+    operator = passedOperator;
+    previousValue = currentValue;
+    currentValue = "";
+}
+
 function handleNumberBtn(num) {
     currentValue += num;
 }
