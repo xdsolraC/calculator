@@ -26,6 +26,10 @@ function handlePlusMinusBtn() {
     currentValue = (parseFloat(currentValue) * -1).toString();
 }
 
+function handlePercentBtn() {
+    currentValue = (parseFloat(currentValue) / 100).toString();
+}
+
 function handleOperatorBtn(passedOperator) {
     if (currentValue === "") return;
     else if (previousValue !== "") {
