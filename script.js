@@ -74,3 +74,43 @@ function operate(operator, a, b) {
             return a / b;
     }
 }
+
+/* Event Listeners */
+const buttons = document.querySelectorAll("button");
+// add event listeners to each button
+buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+        switch (true) {
+            case (button.classList.contains("clear")):
+                handleClearBtn();
+                refreshDisplay("0");
+                break;
+            case (button.classList.contains("plusMinus")):
+                handlePlusMinusBtn();
+                refreshDisplay();
+                break;
+            case (button.classList.contains("percent")):
+                handlePercentBtn();
+                refreshDisplay();
+                break;
+            case (button.classList.contains("operator")):
+                handleOperatorBtn(button.value);
+                break;
+            case (button.classList.contains("number")):
+                handleNumberBtn(button.value);
+                refreshDisplay();
+                break;
+            case (button.classList.contains("decimal")):
+                handleDecimalBtn();
+                refreshDisplay();
+                break;
+            case (button.classList.contains("equals")):
+                handleEqualsBtn();
+                if (!(currentValue === "" && previousValue === "")) {
+                    refreshDisplay();
+                    break;
+                }
+                refreshDisplay("0");
+        }
+    })
+})
