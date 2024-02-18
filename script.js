@@ -22,6 +22,10 @@ function handleClearBtn() {
     previousValue = "";
 }
 
+function handlePlusMinusBtn() {
+    currentValue = (parseFloat(currentValue) * -1).toString();
+}
+
 function handleOperatorBtn(passedOperator) {
     if (currentValue === "") return;
     else if (previousValue !== "") {
