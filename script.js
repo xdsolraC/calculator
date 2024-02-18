@@ -44,6 +44,15 @@ function handleNumberBtn(num) {
     currentValue += num;
 }
 
+function handleDecimalBtn() {
+    if (currentValue === "") {
+        currentValue = "0.";
+    }
+    else if (!(currentValue.includes("."))) {
+        currentValue += ".";
+    }
+}
+
 function handleEqualsBtn() {
     const prev = parseFloat(previousValue);
     const current = currentValue === "" ? prev : parseFloat(currentValue);
