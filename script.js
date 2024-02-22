@@ -62,12 +62,19 @@ function handleDecimalBtn() {
 }
 
 function handleEqualsBtn() {
-    const prev = parseFloat(previousValue);
-    const current = currentValue === "" ? prev : parseFloat(currentValue);
-    if (isNaN(prev) || isNaN(current)) return;
-    currentValue = operate(operator, prev, current).toString();
+    if ((currentValue === "" && previousValue === "") || (currentValue !== "" && previousValue === "")) {
+        return;
+    } else {
+        const prev = parseFloat(previousValue);
+        const current = currentValue === "" ? prev : parseFloat(currentValue);
+        let results = operate(operator, prev, current);
+        currentValue = isNaN(results) ? "Bruh!" : results.toString();
+    }
     operator = "";
     previousValue = "";
+    if (currentValue === "0") {
+        currentValue = "";
+    }
 }
 
 function operate(operator, a, b) {
