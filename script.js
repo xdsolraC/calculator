@@ -80,13 +80,13 @@ function handleEqualsBtn() {
 function operate(operator, a, b) {
     switch (operator) {
         case "+":
-            return a + b;
+            return parseFloat((a + b).toFixed(9));
         case "-":
-            return a - b;
+            return parseFloat((a - b).toFixed(9));
         case "*":
-            return a * b;
+            return parseFloat((a * b).toFixed(9));
         case "/":
-            return a / b;
+            return parseFloat((a / b).toFixed(9));
     }
 }
 
