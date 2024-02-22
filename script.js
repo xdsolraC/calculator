@@ -23,15 +23,23 @@ function handleClearBtn() {
 }
 
 function handlePlusMinusBtn() {
+    if (currentValue === "") {
+        currentValue = "0";
+    }
     currentValue = (parseFloat(currentValue) * -1).toString();
 }
 
 function handlePercentBtn() {
+    if (currentValue === "") {
+        currentValue = "0";
+    }
     currentValue = (parseFloat(currentValue) / 100).toString();
 }
 
 function handleOperatorBtn(passedOperator) {
-    if (currentValue === "") return;
+    if (currentValue === "") {
+        currentValue = "0";
+    }
     else if (previousValue !== "") {
         handleEqualsBtn();
     }
@@ -88,10 +96,14 @@ buttons.forEach((button) => {
             case (button.classList.contains("plusMinus")):
                 handlePlusMinusBtn();
                 refreshDisplay();
+                if (currentValue === "0") {
+                    handleClearBtn();
+                }
                 break;
             case (button.classList.contains("percent")):
                 handlePercentBtn();
                 refreshDisplay();
+                handleClearBtn();
                 break;
             case (button.classList.contains("operator")):
                 handleOperatorBtn(button.value);
