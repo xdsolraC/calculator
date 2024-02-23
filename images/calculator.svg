@@ -1,0 +1,27 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+<style>
+    @media (prefers-color-scheme: dark) {
+      svg {
+       filter: invert(0);
+      }
+    }
+
+    @media (prefers-color-scheme: light) {
+      svg {
+       filter: invert(1);
+      }
+    }
+  </style>
+<rect x="300" y="316" width="98" height="18" rx="9" fill="white"/>
+<rect x="300" y="364" width="98" height="18" rx="9" fill="white"/>
+<rect x="123.284" y="377.581" width="98" height="18" rx="9" transform="rotate(-45 123.284 377.581)" fill="white"/>
+<rect x="192.581" y="390.309" width="98" height="18" rx="9" transform="rotate(-135 192.581 390.309)" fill="white"/>
+<rect x="300" y="155" width="98" height="18" rx="9" fill="white"/>
+<rect x="115" y="155" width="98" height="18" rx="9" fill="white"/>
+<rect x="155" y="213" width="98" height="18" rx="9" transform="rotate(-90 155 213)" fill="white"/>
+<rect x="256" y="71" width="185" height="185" rx="18" stroke="white" stroke-width="16"/>
+<rect x="256" y="256" width="185" height="185" rx="18" stroke="white" stroke-width="16"/>
+<rect x="71" y="256" width="185" height="185" rx="18" stroke="white" stroke-width="16"/>
+<rect x="71" y="71" width="185" height="185" rx="18" stroke="white" stroke-width="16"/>
+<path d="M71 89C71 79.0589 79.0589 71 89 71H423C432.941 71 441 79.0589 441 89V423C441 432.941 432.941 441 423 441H89C79.0589 441 71 432.941 71 423V89Z" stroke="white" stroke-width="16" stroke-linejoin="round"/>
+</svg>
