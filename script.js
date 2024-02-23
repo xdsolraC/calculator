@@ -49,7 +49,13 @@ function handleOperatorBtn(passedOperator) {
 }
 
 function handleNumberBtn(num) {
-    currentValue += num;
+    if (currentValue === "" && num === "0") {
+        return;
+    }
+    else {
+        currentValue += num;
+        refreshDisplay();
+    }
 }
 
 function handleDecimalBtn() {
@@ -117,7 +123,6 @@ buttons.forEach((button) => {
                 break;
             case (button.classList.contains("number")):
                 handleNumberBtn(button.value);
-                refreshDisplay();
                 break;
             case (button.classList.contains("decimal")):
                 handleDecimalBtn();
